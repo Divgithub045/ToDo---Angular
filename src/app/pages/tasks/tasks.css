@@ -1,0 +1,109 @@
+h2 {
+  color: var(--text-primary);
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 0;
+  animation: slideIn 0.5s ease-out;
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  animation: fadeIn 0.6s ease-out;
+}
+
+button[mat-raised-button] {
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0 28px !important;
+  background: var(--accent-primary) !important;
+  box-shadow: 0 4px 16px rgba(79, 140, 255, 0.3) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+button[mat-raised-button]::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+button[mat-raised-button]:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+button[mat-raised-button]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(79, 140, 255, 0.5) !important;
+}
+
+button[mat-raised-button]:active {
+  transform: translateY(0);
+}
+
+.table-container {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-muted);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  animation: fadeIn 0.8s ease-out;
+}
+
+table {
+  width: 100%;
+}
+
+th.mat-header-cell {
+  background: var(--bg-elevated) !important;
+  color: var(--text-secondary) !important;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--border-muted) !important;
+}
+
+td.mat-cell {
+  color: var(--text-primary) !important;
+  font-size: 15px;
+  border-bottom: 1px solid var(--border-muted) !important;
+}
+
+tr.mat-row {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+tr.mat-row:hover {
+  background: var(--bg-elevated) !important;
+  transform: scale(1.01);
+}
+
+mat-chip {
+  font-weight: 600;
+  border-radius: 8px !important;
+  background: var(--accent-success) !important;
+  color: var(--bg-primary) !important;
+  padding: 6px 14px !important;
+  box-shadow: 0 2px 8px rgba(45, 212, 191, 0.3);
+  transition: all 0.3s ease;
+}
+
+mat-chip:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(45, 212, 191, 0.5);
+}
